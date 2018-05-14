@@ -1,0 +1,19 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+block content
+	.container
+		.title-1.text-center.mb-55 Проект команды [__________]
+		.row
+			.col
+				.card.text-center.pb-35
+					.title-2 UI-Kit
+					+button("Перейти", "ui/ui-kit.html")
+			.col
+				.card.text-center.pb-35
+					.title-2 Главная страница
+					+button("Перейти", "home.html")
+		

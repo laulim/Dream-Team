@@ -1,0 +1,13 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Пост в блоге - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+	- var post_title = "Национальный парк Йосемити";
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Пост в блоге

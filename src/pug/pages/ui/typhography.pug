@@ -1,0 +1,14 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Типографика - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left.user-content
+			.section-ui
+				.title Типографика
+				p Вся типографика и стилизация по тегам работает внутри класса <code>.user-content</code>

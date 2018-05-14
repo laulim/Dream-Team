@@ -1,0 +1,12 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			include:markdown-it ../../markdown-articles/docs.md

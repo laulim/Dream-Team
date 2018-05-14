@@ -1,0 +1,9 @@
+mixin link(text, link)
+	a(target!=attributes.target, class!=attributes.class href=link ) #{text}
+
+mixin linkLeftPanel(text, link)
+	a.left-panel-nav__link(target!=attributes.target, class!=attributes.class href=link ) #{text}
+
+mixin linkList(text, link)
+	li
+		a(target!=attributes.target, class!=attributes.class href=link ) #{text}

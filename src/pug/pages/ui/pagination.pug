@@ -1,0 +1,30 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Пагинация - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Пагинация
+
+			include ../../sections/pagination.pug
+				
+			.section-ui.mt-20
+				.title-medium Подключение из файла
+			pre include ../../sections/pagination.pug
+
+			.section-ui
+				.title-medium Разметка
+			pre.
+				.pagination
+					a.pagination__item.pagination__item--prev(href="#") Назад
+					a.pagination__item(href="#") 01
+					a.pagination__item(href="#") 02
+					a.pagination__item(href="#") 03
+					a.pagination__item(href="#") 04
+					a.pagination__item(href="#") 05
+					a.pagination__item.pagination__item--next(href="#") Вперед

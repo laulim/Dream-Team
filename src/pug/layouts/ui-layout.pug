@@ -1,0 +1,16 @@
+include _mixins-links.pug
+
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./_head-part-ui.pug
+		
+	body(class=pageClass)
+		block content
+
+		block scripts
+
+		include ./_footer-part-ui.pug
+		

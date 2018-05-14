@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Шапка Администратор - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard dark-bg'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Шапка Администратор
+
+		p Шапку админа подключаем из отдельной файла, через include
+		
+		.section-ui.mt-20
+			.title-medium Подключение из файла
+		pre include ../../sections/header-admin.pug
