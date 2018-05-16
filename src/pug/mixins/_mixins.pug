@@ -1,1 +1,22 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+
+//- Badge
+
+mixin badge(text)
+	.badge #{text}
+
+
+//- Errors
+
+mixin error-comment()
+	.error
+		.error__title Комментарий не может быть пустым.
+
+mixin error-email()
+	.error
+		.error__title.error__title--with-desc Данный email уже занят
+		.error__desc 
+			p.
+				Используйте другой email чтобы создать новый аккаунт.
+			p.
+				Или воспользуйтесь #[a(href="#" target="_blank") восстановлением пароля], чтобы войти на сайт.

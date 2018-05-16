@@ -6,7 +6,11 @@ block variables
 
 block content
 	include ../../sections/ui-nav-inside-ui.pug
+	include ../../mixins/_mixins.pug
 
 	.main-wrapper
 		.container.container--left
 			.title.mb-0 Бейджи
+
+			.section-ui
+				+badge ('Пользователь')
