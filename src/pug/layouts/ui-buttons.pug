@@ -1,0 +1,19 @@
+extends layouts/ui-layout.pug
+
+block variables
+	-var title = 'UI - Buttons - кнопки'
+	-var pageClass = 'index-page'
+
+block content
+	 .button(href='#') Вперед
+	    i.fas.fa-arrow-right
+	    | Вперед
+	 .button(href='#') Подробнее
+	 .button(href='#') Редактировать
+	 .button(href='#') Удалить
+	 .button(href='#') Сохранить
+	 .button(href='#') Войти
+	 .button(href='#') Профиль
+
+block scripts
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
