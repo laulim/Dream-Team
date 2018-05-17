@@ -1,12 +1,9 @@
-mixin error()
+mixin error(title)
 	.error
-		.error__title Комментарий не может быть пустым.
+		.error__title #{title}
 
-mixin errorWithDesc()
+mixin errorWithDesc(title, desc)
 	.error
-		.error__title.error__title--with-desc Данный email уже занят
+		.error__title.error__title--with-desc #{title}
 		.error__desc 
-			p.
-				Используйте другой email чтобы создать новый аккаунт.
-			p.
-				Или воспользуйтесь #[a(href="#" target="_blank") восстановлением пароля], чтобы войти на сайт.
+			block
