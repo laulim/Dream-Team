@@ -9,10 +9,18 @@ block content
 
 	.main-wrapper
 		.container.container--left
-			.title Шапка общая
+			.title Шапка гость
+			include ../../sections/header.pug 
 
-		// include ../../sections/header.pug
+			.title Шапка пользователь
+			include ../../sections/header_user.pug 
+
 
 		.section-ui.mt-20
 			.title-medium Подключение из файла
 		pre include ../../sections/header.pug
+		
+
+
+
+			
