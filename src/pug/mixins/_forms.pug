@@ -1,0 +1,10 @@
+mixin test-form(title, type, name, placeholder)
+	form
+		.label #{title}
+		input(type = type, name = name, placeholder = placeholder).input.pl-15.mb-15
+
+mixin textarea(label, text)
+	.mb-15
+	form
+		.label.pb-15 #{label}
+		textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30'  name='message') #{text}
