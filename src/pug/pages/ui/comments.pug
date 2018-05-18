@@ -10,3 +10,33 @@ block content
 	.main-wrapper
 		.container.container--left
 			.title.mb-0 Комментарии
+
+			.section-ui
+				.title-medium Опубликованные комментарии пользователей
+			.section-ui
+				.comment-wrap
+					+avatar("../../../img/avatars/avatar-2.jpg", "Джон До", "avatar--small")
+					.comment__content
+						.comment__header
+							.comment__user-name Джон До
+							.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
+						.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
+			.section-ui
+				.comment-wrap
+					+avatar("../../../img/avatars/avatar-3.jpg", "Джон До", "avatar--small")
+					.comment__content
+						.comment__header
+							.comment__user-name Джон До
+							.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
+						.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
+			.section-ui
+				pre.
+					.comment-wrap
+						+avatar("../../../img/avatars/avatar-2.jpg", "Джон До", "avatar--small")
+						.comment__content
+							.comment__header
+								.comment__user-name Джон До
+								.comment__date #&#91;i.far.fa-clock&#93; 05 Мая 2017 года в 15:45
+							.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
+
+
