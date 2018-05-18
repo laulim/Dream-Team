@@ -10,10 +10,43 @@ block content
 	.main-wrapper
 		.container.container--left
 			.title Кнопки
-			p
-				em Одна кнопка ниже оформлена для примера.
+			
+			.section-ui
+				+button('Вперед','#','fa-arrow-right') 
+			pre.
+				+button('Вперед','#','fa-arrow-right')
 
 			.section-ui
 				+button('Подробнее', '#') 
 			pre.
 				+button('Подробнее', '#')
+
+			.section-ui
+				+button-edit('Редактировать', '#') 
+			pre.
+				+button-edit('Редактировать', '#')
+
+			.section-ui
+				+button-delete('Удалить', '#') 
+			pre.
+				+button-delete('Удалить', '#')
+
+			.section-ui
+				+button-save('Сохранить', '#') 
+			pre.
+				+button-save('Сохранить', '#')
+
+			.section-ui
+				+button-enter('Войти', '#') 
+			pre.
+				+button-enter('Войти', '#')
+
+			.section-ui
+				+button-profile('Профиль', '#') 
+			pre.
+				+button-profile('Профиль', '#') 
+
+			
+				
+
+
