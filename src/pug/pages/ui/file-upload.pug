@@ -1,0 +1,70 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Форма загрузки изображении - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Форма загрузки изображении
+		.section-ui
+			.file-upload
+				fieldset
+					legend
+						.title-6.mb-5 Фотография
+						.legend__descr Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+					input(type="file" name="file" data-multiple-caption="{count} файлов выбрано" multiple)#file.inputfile
+					label(for="file") Выбрать файл
+					span Файл не выбран
+			pre.
+				.file-upload
+					fieldset
+						legend
+							.title-6.mb-5 Фотография
+							.legend__descr Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+						input(type="file" name="file" data-multiple-caption="{count} файлов выбрано" multiple)#file.inputfile
+						label(for="file") Выбрать файл
+						span Файл не выбран
+			.file-upload
+				fieldset
+					legend
+						.title-6.mb-5 Фотография
+						.legend__descr Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+					input(type="file" name="file-2" data-multiple-caption="{count} файлов выбрано" multiple)#file-2.inputfile
+					label(for="file-2") Выбрать файл
+					span Файл не выбран
+			pre.
+				fieldset
+					legend
+						.title-6.mb-5 Фотография
+						.legend__descr Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+					input(type="file" name="file-2" data-multiple-caption="{count} файлов выбрано" multiple)#file-2.inputfile
+					label(for="file-2") Выбрать файл
+					span Файл не выбран
+			.file-upload
+				fieldset
+					legend
+						.title-6.mb-5 Изображение
+						.legend__descr Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+					input(type="file" name="file-3" data-multiple-caption="{count} файлов выбрано" multiple)#file-3.inputfile
+					label(for="file-3") Выбрать файл
+					span Файл не выбран
+				.file-upload__thumb
+					img(src='../img/blog/img-post-uploaded.jpg')
+					button.button--delete Удалить
+			pre.
+				.file-upload
+					fieldset
+						legend
+							.title-6.mb-5 Изображение
+							.legend__descr Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+						input(type="file" name="file-3" data-multiple-caption="{count} файлов выбрано" multiple)#file-3.inputfile
+						label(for="file-3") Выбрать файл
+						span Файл не выбран
+					.file-upload__thumb
+						img(src='../img/blog/img-post-uploaded.jpg')
+						button.button--delete Удалить
+	script(src="../js/custom-file-input.js")
