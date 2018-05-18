@@ -1,11 +1,12 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
 
-//- Badge
+mixin linkIcons(link, icon)
+	- iconClass = icon || ''
+	a(href=link, target="_blank")
+		i(class="fab " + iconClass)
 
 mixin badge(text)
 	.badge #{text}
-
-//- LOGO
 
 mixin logo(title, subtitle)
 	.logo
