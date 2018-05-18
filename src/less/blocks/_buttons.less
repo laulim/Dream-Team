@@ -11,34 +11,114 @@
 	
 	height: 2.75em;
 	
-	padding-top: 0.68em; // 
+	padding-top: 0.68em; 
 	padding-left: 1.25em;
 	padding-right: 1.25em;
 	
 	color: #037EC6;
-	background: #FFF;
+	background-color: #FFF;
 	cursor: pointer;
 	text-decoration: none;
 	font-weight: 700;
 		
 	&:hover, &:focus {
-		border-color: #DDE8EE;
-		background-color: #DDE8EE;
+		border-color: @forward-hover;
+		background-color: @forward-hover;
 	}
 
 	&:active {
-		border-color: #b4dff6;
-		background-color: #b4dff6;
+		border-color: @forward-active;
+		background-color: @forward-active;
 	}
 } 
 
 .button--edit {
-	
+	color: @color-text-white;
+	border-color: transparent;
+	background-color: @yellow-normal;
+
 	&:hover, &:focus {
-		
-	}
+		border-color: transparent;
+		background-color: @yellow-light-hover;
+		}
 
 	&:active {
-		
+		border-color: transparent;
+		background-color: @yellow-hard-active;
+		}
 	}
-}
+
+.button--delete {
+	color: @color-text-white;
+	border-color: transparent;
+	background-color: @red-normal;
+
+	&:hover, &:focus {
+		border-color: transparent;
+		background-color: @red-light-hover;
+		}
+
+	&:active {
+		border-color: transparent;
+		background-color: @red-hard-active;
+		}
+	}
+
+.button--save {
+	color: @color-text-white;
+	border-color: transparent;
+	background-color: @blue-normal;
+
+	&:hover, &:focus {
+		border-color: transparent;
+		background-color: @blue-light-hover;
+		}
+
+	&:active {
+		border-color: transparent;
+		background-color: @blue-hard-active;
+		}
+	}
+
+.button--enter {
+	color: @color-text-blue;
+	border-color: transparent;
+	box-shadow: 0px 6px 16px 0px rgba(23, 50, 66, 0.75);
+
+	&:hover, &:focus {
+		color: @color-text-white;
+		border-color: transparent;
+		background-color: @blue-light-enter;
+		}
+
+	&:active {
+		color: @color-text-white;
+		border-color: transparent;
+		background-color: @blue-hard-enter;
+		box-shadow: none;
+		}
+	}
+
+.button--profile {
+	color: @color-text-white;
+	border-color: transparent;
+	background-color: @gray-normal;
+	height: 0;
+	padding: 0.3em 0.8em 1.3em 0.8em;
+	font-size: 13px;
+	font-weight: 400;
+
+	&:hover, &:focus {
+		color: @color-text-white;
+		border-color: transparent;
+		background-color: @gray-light-hover;
+		}
+
+	&:active {
+		color: @color-text-white;
+		border-color: transparent;
+		background-color: @gray-hard-active;
+		box-shadow: none;
+		}
+	}
+
