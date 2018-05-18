@@ -1,0 +1,31 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Кастомные чекбоксы'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Кастомные чекбоксы
+			
+			.checklist
+				label(class="checkbox__label")
+					input(class="checkbox__input" type="checkbox"  name="checkbox")
+					span.checkbox__text
+					|&nbsp;Запомнить меня
+					
+
+				label(class="checkbox__label")
+					input(class="checkbox__input" type="checkbox"  name="checkbox")
+					span.checkbox__text
+					|&nbsp;Запомнить меня
+
+				pre.
+					label(class="checkbox__label")
+						input(class="checkbox__input" type="checkbox"  name="checkbox")
+						span.checkbox__text
+						|&nbsp;Запомнить меня
+					
