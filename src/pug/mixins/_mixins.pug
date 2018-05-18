@@ -1,1 +1,5 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+mixin linkIcons(link, icon)
+	- iconClass = icon || ''
+	a(href=link, target="_blank")
+		i(class="fab " + iconClass)

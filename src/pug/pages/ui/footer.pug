@@ -20,16 +20,14 @@ block content
 		.section-ui
 			.title-medium Разметка
 
-	//- - var vk = "<i class="fas fa-heart"></i>";
-
 	footer.footer
 		.container
 			.row
 				.col-4
 					p © Dream-Team
-					p Создано с
+					p Создано с &nbsp
 						i.fas.fa-heart
-						| в #[a(class='footer-link__bold' href='#' target='_blank') WebCademy.ru] в 2017 году
+						| &nbsp в #[a(class='footer-link__style' href='#' target='_blank') WebCademy.ru] в 2017 году
 				.col-4
 					nav
 						ul.footer-nav
@@ -45,28 +43,8 @@ block content
 								a(href="#") Контакты
 				.col-4
 					.footer__icons
-						a(
-							href="#"
-							target="_blank"
-							)
-							i.fab.fa-vk
-						a(
-							href="#"
-							target="_blank"
-							)
-							i.fab.fa-twitter
-						a(
-							href="#"
-							target="_blank"
-							)
-							i.fab.fa-youtube 
-						a(
-							href="#"
-							target="_blank"
-							)
-							i.fab.fa-instagram
-						a(
-							href="#"
-							target="_blank"
-							)
-							i.fab.fa-facebook-f
+						+linkIcons("#", "fa-vk")
+						+linkIcons("#", "fa-twitter")
+						+linkIcons("#", "fa-youtube")
+						+linkIcons("#", "fa-instagram")
+						+linkIcons("#", "fa-facebook-f")
