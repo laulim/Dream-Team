@@ -1,2 +1,55 @@
-mixin button(text, link)
-	a(class="button" href=link) #{text}	
+mixin button(text,link,icon)
+   if icon
+      a.button(href=link)
+         | #{text}&nbsp;
+         i(class="fas " + icon)
+   else
+      a.button(href=link)
+         | #{text}
+
+mixin button-edit(text,link,icon)
+   if icon
+      a.button.button--edit(href=link)
+         | #{text}
+         i(class="fas " + icon)
+   else
+      a.button.button--edit(href=link)
+         | #{text}
+
+mixin button-delete(text,link,icon)
+   if icon
+      a.button.button--delete(href=link)
+         | #{text}
+         i(class="fas " + icon)
+   else
+      a.button.button--delete(href=link)
+         | #{text}
+
+mixin button-save(text,link,icon)
+   if icon
+      a.button.button--save(href=link)
+         | #{text}
+         i(class="fas " + icon)
+   else
+      a.button.button--save(href=link)
+         | #{text}
+
+mixin button-enter(text,link,icon)
+   if icon
+      a.button.button--enter(href=link)
+         | #{text}
+         i(class="fas " + icon)
+   else
+      a.button.button--enter(href=link)
+         | #{text}
+
+mixin button-profile(text,link,icon)
+   if icon
+      a.button.button--profile(href=link)
+         | #{text}
+         i(class="fas " + icon)
+   else
+      a.button.button--profile(href=link)
+         | #{text}
+
+
