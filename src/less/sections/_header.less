@@ -1,18 +1,170 @@
 .header {
+	height: 150px;
+	width: 100%;
+	background-image: url(../../img/bg/header-bg-1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
 
+ }
+
+.block-left{
+
+	display: flex;
+	padding: 15px;
+	height: inherit;
+}
+ 
+
+
+.block-left__icon{
+	padding-top: 9px;
+	padding-right: 5px;
 }
 
-.header__top {
+
+
+.block-left__titledesc{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	
 }
 
-.header__nav {
+
+
+.header-title h2 {
+font-weight: bold;
+margin-bottom: 5px;
 
 }
 
-.header__nav-link {
-	
-	&--active {
-		
+.header-title h5{
+
+color: hsla(240,50%,50%,0.5);
+}
+
+
+.header-nav ul{
+
+	margin-bottom: 10px;
+	padding: 0px;
+	display: flex;
+	list-style-type: none;
+
+	 a{
+		margin-right: 30px;
+		color: black;
+		font-size: 15px;
+		&:hover{
+
+			color: cornflowerblue;
+		}
+		&:focus{
+			text-decoration: none;
+			outline: none;
+		}
+
 	}
+
+
 }
+
+
+
+
+
+.block-right ul{
+
+	padding-right: 20px;
+	display: flex;
+
+	list-style-type: none;
+
+
+	a{
+		margin-right: 20px;
+		color: black;
+
+
+		&:hover{
+
+			color: cornflowerblue;
+		}
+		&:focus{
+			text-decoration: none;
+			outline: none;
+		}
+
+	}
+
+}
+
+
+/*  Стили для header_user.pug  */
+
+
+.block-right.user{
+
+	display: flex;
+	margin: 20px;
+	margin-right: 30px;
+	}
+
+
+
+.user-image img{
+
+border-radius: 55px;
+margin-right: 10px;
+
+}
+
+.user-name{
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.user-name h5{
+color: hsla(240,50%,50%,0.5);
+}
+
+.user-name h4{
+	font-weight: bold;
+}
+
+.nav-link ul{
+
+	padding: 0px;
+	
+
+	
+
+	a{
+	background-color: blue;
+	background-color: hsla(240,50%,50%,0.3);
+	display: inline-block;
+	border-radius: 15px;
+	padding: 5px;
+	color: white;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	&:hover{
+		.transition;
+		color: black;
+		background-color: hsla(225,50%,50%,0.5);
+		}
+    &:focus{
+			text-decoration: none;
+			outline: none;
+		} 
+
+     }
+}
+

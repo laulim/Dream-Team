@@ -8,11 +8,21 @@ block content
 	include ../../sections/ui-nav-inside-ui.pug
 
 	.main-wrapper
-		.container.container--left
-			.title Шапка общая
 
-		// include ../../sections/header.pug
+		.section-ui
+			.title Шапка гость
+			include ../../sections/header.pug 
+	
+		.section-ui
+			.title Шапка пользователь
+			include ../../sections/header_user.pug 
+
 
 		.section-ui.mt-20
 			.title-medium Подключение из файла
-		pre include ../../sections/header.pug
+			pre include ../../sections/header.pug
+		
+
+
+
+			
