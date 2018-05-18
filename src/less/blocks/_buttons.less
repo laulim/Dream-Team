@@ -48,15 +48,13 @@
 		}
 	}
 
-a.button--delete {
-	color: @color-text-white!important;
-	text-decoration: none!important;
+.button--delete {
+	outline: none;
+	color: @color-text-white;
 	border-color: transparent;
 	background-color: @red-normal;
-	font-size: 14px;
-	height: 2.3em;
-	padding-top: 0.50em;
-	
+	height: 2em;
+
 	&:hover, &:focus {
 		border-color: transparent;
 		background-color: @red-light-hover;
@@ -125,13 +123,3 @@ a.button--delete {
 		box-shadow: none;
 		}
 	}
-
-a.button--link {
-		font-size: 16px;
-		text-decoration: none;
-		color: @link-color!important;
-	&:hover{
-		text-decoration: underline;
-	}
-}
-
