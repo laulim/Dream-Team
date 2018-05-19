@@ -1,8 +1,19 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
 
-//- Badge
+mixin linkIcons(link, icon)
+	- iconClass = icon || ''
+	a(href=link, target="_blank")
+		i(class="fab " + iconClass)
 
 mixin badge(text)
 	.badge #{text}
+
+mixin logo(title, subtitle)
+	.logo
+		.logo__icon
+			i(class="far fa-paper-plane")
+		.logo__text
+			a(href="#").header-logo__title #{title}
+			.header-logo__sub #{subtitle}
 
 
