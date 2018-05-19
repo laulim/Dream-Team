@@ -3,11 +3,37 @@
 }
 
 .input {
-
+	height: 42px;
+	width: 100%;
+	outline-style: none;
+	border-radius: @form-border-radius;
+ 	border: 1px solid @border-color;
+ 	background-color: @white;
+ 	transition: all 0.30s ease-in-out;
+ 	line-height: 32px;
+ 	margin-top: 10px;
+ 	
+ 	&:active, &:hover, &:focus {
+ 		border: 1px solid @border-color-active;
+ 		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.4);
+ 	}
 }
 
 .textarea {
-
+	font-size: 16px;
+	line-height: 24px;
+	min-height: 150px;
+	width: 100%;
+	border-radius: @form-border-radius;
+	outline-style: none;
+	transition: all 0.30s ease-in-out;
+ 	border: 1px solid @border-color;
+ 	background-color: @white;
+ 	
+ 	&:active, &:hover, &:focus {
+ 		border: 1px solid @border-color-active;
+ 		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.4);
+ 	}
 }
 
 .fieldset {
@@ -15,5 +41,9 @@
 } 
 
 .label {
-
+	font-size: 20px;
+	font-family: "Open Sans";
+	color: #000;
+	font-weight: bold;
+	line-height: 1.2;
 }
