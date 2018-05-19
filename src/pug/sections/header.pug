@@ -6,9 +6,10 @@ header.header-bg
 	.header
 		.header__top
 			+logo('Digital Lifestyle', 'Сайт IT специалиста')
-			.header-user
-				+link('Регистрация', '#').header-user__link
-				+link('Вход', '#').header-user__link
+			+userStatus(false)
+			//- .header-user
+			//- 	+link('Регистрация', '#').header-user__link
+			//- 	+link('Вход', '#').header-user__link
 		ul.header__nav
 			+linkList('Главная', '#').header__nav-link.header__nav-link--active
 			+linkList('Обо мне', '#').header__nav-link
@@ -24,12 +25,13 @@ header.header-bg
 	.header
 		.header__top
 			+logo('Digital Lifestyle', 'Сайт IT специалиста')
-			.header-user
-				+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
-				.header-user__name Юрий Ключевский
-				.header-user__badge Пользователь
-				+button-profile('Профиль', '#')
-				+button-profile('Выход', '#')
+			+userStatus(true)
+			//- .header-user
+			//- 	+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
+			//- 	.header-user__name Юрий Ключевский
+			//- 	.header-user__badge Пользователь
+			//- 	+button-profile('Профиль', '#')
+			//- 	+button-profile('Выход', '#')
 		ul.header__nav
 			+linkList('Главная', '#').header__nav-link.header__nav-link--active
 			+linkList('Обо мне', '#').header__nav-link

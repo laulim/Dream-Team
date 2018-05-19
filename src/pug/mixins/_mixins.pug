@@ -16,4 +16,16 @@ mixin logo(title, subtitle)
 			a(href="#").header-logo__title #{title}
 			.header-logo__sub #{subtitle}
 
+mixin userStatus(status)
+	if (status == true)
+		.header-user
+			+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
+			.header-user__name Юрий Ключевский
+			.header-user__badge Пользователь
+			+button-profile('Профиль', '#')
+			+button-profile('Выход', '#')
 
+	if (status == false)
+		.header-user
+			+link('Регистрация', '#').header-user__link
+			+link('Вход', '#').header-user__link
