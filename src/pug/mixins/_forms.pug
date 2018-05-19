@@ -4,5 +4,8 @@ mixin test-form(title, type, name, placeholder)
 
 mixin textarea(label, text)
 	.mb-15
-		.title-medium.pb-15 #{label}
-		textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30'  name='message') #{text}
+		if label
+			.title-medium.pb-15 #{label}
+			textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30'  name='message') #{text}
+		else
+			textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30'  name='message') #{text}
