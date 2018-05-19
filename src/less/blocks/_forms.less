@@ -17,3 +17,37 @@
 .label {
 
 }
+
+fieldset {
+	border: 0;
+}
+
+label {
+	display: block;
+	vertical-align: top;
+	margin-top: 15px;
+}
+
+.form__radio {
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: 0.0625rem solid #cccccc;
+	outline: none;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	margin-right: 10px;
+	vertical-align: top;
+}
+
+.form__input--radio:checked + .form__radio {
+	background: #1e6791;
+	border: 0.375rem solid #ffffff;
+}
+
+.form__input--radio {
+	display: none;
+}
