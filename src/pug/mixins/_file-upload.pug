@@ -13,7 +13,8 @@ mixin file-upload(title, number, imgPath)
 				span Файл не выбран
 			.file-upload__thumb
 				img(src='../img/blog/img-post-uploaded.jpg')
-				+button-delete('Удалить', '#') Удалить
+				.absolute
+					+button-delete('Удалить', '#') Удалить
 	else
 		.file-upload
 			fieldset
