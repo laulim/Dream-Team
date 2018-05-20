@@ -40,13 +40,14 @@
 
 } 
 
-label {
+.form-radio__label {
 	display: block;
 	vertical-align: top;
 	margin-top: 15px;
+	position: relative;
 }
 
-.form__radio {
+.form__radio__text {
 	display: inline-block;
 	width: 1.25rem;
 	height: 1.25rem;
@@ -61,15 +62,18 @@ label {
 	vertical-align: top;
 }
 
-.form__input--radio:checked + .form__radio {
+.form-radio__input:checked + .form__radio__text {
 	background: #1e6791;
 	border: 0.375rem solid #ffffff;
 	box-shadow: 0 0 0 3px #cae2f8;
 }
 
 
-.form__input--radio {
-	display: none;
+.form-radio__input {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	z-index: -1;
 }
 
 
