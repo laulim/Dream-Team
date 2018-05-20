@@ -1,6 +1,9 @@
-mixin test-form(title, type, name, placeholder)
-		.title-medium #{title}
-		input(type = type, name = name, placeholder = placeholder).input.pl-15.mb-15
+mixin textInput(name, type, placeholder, label)
+	if label
+		.title-medium.pb-15 #{label}
+		input(type = type, name = name, placeholder = placeholder).input
+	else
+		input(type = type, name = name, placeholder = placeholder).input
 
 mixin textarea(name, placeholder, label)
 	if label
