@@ -10,3 +10,18 @@ block content
 	.main-wrapper
 		.container.container--left
 			.title.mb-0 Аватарки
+
+			.section-ui
+				.title-medium.mb-20 Аватар большой
+				+avatar("../../../img/avatars/photo-big.jpg", "Емельян Казаков")
+			.section-ui
+				pre.
+					+avatar("../../../img/avatars/photo-big.jpg", "Емельян Казаков")
+
+			.section-ui
+				.title-medium.mb-20 Аватар маленький
+				+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
+			.section-ui
+				pre.
+					+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
+
