@@ -32,7 +32,7 @@ mixin userStatus(status)
 
 
 mixin checkbox(name, label)
-	label(class="checkbox__label")
+	label.checkbox__label(class!=attributes.class)
 		input(class="checkbox__input" type="checkbox"  name= name)
-		span.checkbox__text
+		span.checkbox__type
 		|&nbsp;#{label}
