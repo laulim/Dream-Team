@@ -12,20 +12,9 @@ block content
 			.title Кастомные чекбоксы
 			
 			.checklist
-				label(class="checkbox__label")
-					input(class="checkbox__input" type="checkbox"  name="checkbox")
-					span.checkbox__text
-					|&nbsp;Запомнить меня
-					
-
-				label(class="checkbox__label")
-					input(class="checkbox__input" type="checkbox"  name="checkbox")
-					span.checkbox__text
-					|&nbsp;Запомнить меня
+				+checkbox('checkbox', 'Запомнить меня')
+				+checkbox('checkbox', 'Запомнить меня')
 
 				pre.
-					label(class="checkbox__label")
-						input(class="checkbox__input" type="checkbox"  name="checkbox")
-						span.checkbox__text
-						|&nbsp;Запомнить меня
+					+checkbox('checkbox', 'Запомнить меня')
 					
