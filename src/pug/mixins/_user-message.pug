@@ -9,5 +9,5 @@ mixin user-message(date, name, email, attachFileName)
 		.user-message__text
 			block
 		.user-message__attachments
-			.user-message__attachments-name Прикрепленные файлы
-			a.button--link(href="usercontent/pdf/" + attachFileName download=attachFileName).ml-5 #{attachFileName}
+			.user-message__attachments-name Прикрепленные файлы:
+			a.button--link(href="usercontent/pdf/" + attachFileName download=attachFileName) #{attachFileName}
