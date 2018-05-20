@@ -8,7 +8,7 @@ mixin linkList(text, link)
 	li
 		a(target!=attributes.target, class!=attributes.class href=link ) #{text}
 
-mixin linkIcon(text, link ,icon)
+mixin linkFasIcon(text, link ,icon)
 	a(target!=attributes.target, class!=attributes.class href=link ) 
 		i.fas(class= icon)
 		span #{text}
