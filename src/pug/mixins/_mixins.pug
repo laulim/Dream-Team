@@ -1,1 +1,31 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+
+mixin linkIcons(link, icon)
+	- iconClass = icon || ''
+	a(href=link, target="_blank")
+		i(class="fab " + iconClass)
+
+mixin badge(text)
+	.badge #{text}
+
+mixin logo(title, subtitle)
+	.logo
+		.logo__icon
+			i(class="far fa-paper-plane")
+		.logo__text
+			a(href="#").header-logo__title #{title}
+			.header-logo__sub #{subtitle}
+
+mixin userStatus(status)
+	if (status == true)
+		.header-user
+			+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
+			.header-user__name Юрий Ключевский
+			.header-user__badge Пользователь
+			+button-profile('Профиль', '#')
+			+button-profile('Выход', '#')
+
+	if (status == false)
+		.header-user
+			+link('Регистрация', '#').header-user__link
+			+link('Вход', '#').header-user__link
