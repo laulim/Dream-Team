@@ -11,5 +11,38 @@ block content
 		.container.container--left
 			.section-ui
 				.title Элементы формы
-	include file-upload.pug
 
+				.title-medium Текстовые поля
+				
+				+textInput('firstname', 'text', 'Введите имя', 'Поле для ввода')
+				+textarea('Сообщение - Textarea', 'Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов.')
+
+
+				.title-medium Радиокнопки
+				
+				fieldset
+					label.form__label--radio
+						input.form__input--radio(type='radio', name='variant')
+						span.form__radio
+						| Вариант 1
+					label.form__label--radio
+						input.form__input--radio(type='radio', name='variant')
+						span.form__radio
+						| Вариант 2
+				p
+					em код:
+
+				pre.
+					fieldset
+						label.form__label--radio
+							input.form__input--radio(type='radio', name='variant')
+							span.form__radio
+							| Вариант 1
+						label.form__label--radio
+							input.form__input--radio(type='radio', name='variant')
+							span.form__radio
+							| Вариант 2
+			
+
+
+	include file-upload.pug
