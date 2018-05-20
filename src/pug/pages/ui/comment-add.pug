@@ -9,6 +9,7 @@ block content
 
 	.main-wrapper
 		.container.container--left
+
 			.title Комментарии
 			.title-section.mb-1 Оставить комментарий
 			.section-ui
@@ -18,6 +19,5 @@ block content
 					.comment-add__form
 						.title-6.mt-0.mb-2 Юрий Ключевский
 						+error('Комментарий не может быть пустым.')
-						+textarea('', "Присоединиться к обсуждению...")
+            +textarea('comment', 'Присоединиться к обсуждению...')
 						+button('Опубликовать','#')
-
