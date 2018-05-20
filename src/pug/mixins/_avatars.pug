@@ -1,0 +1,4 @@
+mixin avatar(img, name, cssClass)
+	- cssClass = cssClass || ''
+	div(class="avatar " + '' + cssClass)
+		img(src= img title= name)
