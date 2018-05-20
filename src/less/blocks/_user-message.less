@@ -1,34 +1,76 @@
 .user-message {
-
+	position: relative;
+	background-color: #f6f7f8;
+	padding: 18px 22px;
+	border-radius: 6px;
 }
 
-.user-message__header {
-
+.user-message__header{
+	display: flex;
+	justify-content: space-between;
 }
 
 .user-message__date {
-
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	font-size: 16px;
+	line-height: 24px;
+	color: #7B7B7C;
+	margin-bottom: 10px;
+	
 }
 
 .user-message__from {
-
+	display: flex;
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
 }
 
 .user-message__name {
-
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	
 }
 
-.user-message__email {
-
+a.user-message__email {
+	margin-left: 19px;
+	font-size: 16px;
+	color: @link-color;
+	line-height: 24px;
+	text-decoration: none;
+	
+	&:hover{
+		text-decoration: underline;
+	}
 }
 
 .user-message__text {
-
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 20px;
 }
 .user-message__attachments {
-
+	display: flex;
 }
 
 .user-message__attachments-name {
+	font-size: 16px;
+	font-weight: 700;
+}
 
-} 
+.date-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+a.button--link {
+		font-size: 16px;
+		text-decoration: none;
+		margin-left: 20px;
+	&:hover{
+		text-decoration: underline;
+	}
+}

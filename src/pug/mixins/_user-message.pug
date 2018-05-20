@@ -1,0 +1,13 @@
+mixin user-message(date, name, email, attachFileName)
+	.user-message
+		.user-message__header
+			.user-message__date #{date}
+			+button-delete('Удалить', '#')
+		.user-message__from
+			.user-message__name #{name}
+			a(href="mailto:"+email).user-message__email #{email}
+		.user-message__text
+			block
+		.user-message__attachments
+			.user-message__attachments-name Прикрепленные файлы:
+			a.button--link(href="usercontent/pdf/" + attachFileName download=attachFileName) #{attachFileName}
