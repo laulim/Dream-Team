@@ -1,0 +1,20 @@
+
+mixin textInput(name, type, placeholder, label)
+	if label
+		.title-medium.pb-15 #{label}
+		input(type = type, name = name, placeholder = placeholder).input
+	else
+		input(type = type, name = name, placeholder = placeholder).input
+
+mixin textarea(name, placeholder, label)
+	if label
+		.title-medium.pb-15 #{label}
+		textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30',  name= name, placeholder= placeholder)
+	else
+		textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30',  name= name, placeholder= placeholder)
+
+mixin radioButton(name, value, text)
+	label.form-radio__label
+		input.form-radio__input(type='radio', name= name, value= value)
+		span.form__radio__text
+		| #{text}

@@ -10,5 +10,45 @@ block content
 	.main-wrapper
 		.container.container--left
 			.section-ui
-				.title Элементы формы
 
+				.title-section Радиокнопки
+				
+				fieldset
+					+radioButton('option', 'option-1', 'Вариант 1')
+					+radioButton('option', 'option-2', 'Вариант 2')
+			.section-ui
+				pre.
+					+radioButton('option', 'option-1', 'Вариант 1')
+					+radioButton('option', 'option-2', 'Вариант 2')
+
+			.section-ui
+				.title-section.mb-20 Кастомные чекбоксы
+
+				.checklist
+					+checkbox('checkbox', 'Запомнить меня').mr-60
+					+checkbox('checkbox', 'Запомнить меня')
+			.section-ui
+				pre.
+					+checkbox('checkbox', 'Запомнить меня')
+
+			.section-ui
+				.title-section Формы загрузки изображений
+				+file-upload("Фотография", 1)
+					p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+				pre.
+					+file-upload("Фотография", 1)
+						p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+				
+				+file-upload("Фотография", 2)
+					p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+				pre.
+					+file-upload("Фотография", 2)
+						p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+				
+				+file-upload("Изображение", 3,'../img/blog/img-post-uploaded.jpg')
+					p Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+				pre.
+					+file-upload("Изображение", 3,'../img/blog/img-post-uploaded.jpg')
+						p Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+
+	script(src="../js/custom-file-input.js")

@@ -4,3 +4,25 @@ mixin card()
 			block
 		else
 			p No content provided
+
+
+mixin cardBlogPost(img, title, link)
+	.card-post
+		.card-post__img
+			img(src= img)
+		.card-post__title.
+			#{title}
+		+button('Читать', link)
+
+mixin cardPortfolio(img, title, link)
+	.card-portfolio
+		.card-portfolio__img
+			img(src= img)
+		.card-portfolio__title.
+			#{title}
+		+button('Смотреть кейс', link)
+
+
+
+
+
