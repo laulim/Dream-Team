@@ -17,17 +17,28 @@
  		border: 1px solid @border-color-active;
  		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.4);
  	}
-
 }
 
 .textarea {
-
+	font-size: 16px;
+	line-height: 24px;
+	min-height: 150px;
+	width: 100%;
+	border-radius: @form-border-radius;
+	outline-style: none;
+	transition: all 0.30s ease-in-out;
+ 	border: 1px solid @border-color;
+ 	background-color: @white;
+ 	
+ 	&:active, &:hover, &:focus {
+ 		border: 1px solid @border-color-active;
+ 		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.4);
+ 	}
 }
 
 .fieldset {
 
 } 
-
 
 .form-radio__label {
 	display: block;
@@ -64,6 +75,5 @@
 	left: 3px;
 	z-index: -1;
 }
-
 
 
