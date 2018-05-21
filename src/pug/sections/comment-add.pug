@@ -1,0 +1,8 @@
+.comment-add
+	.comment-add__avatar
+		+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
+	.comment-add__form
+		.title-6.mt-0.mb-2 Юрий Ключевский
+		+error('Комментарий не может быть пустым.')
+		+textarea('comment', 'Присоединиться к обсуждению...')
+		+button('Опубликовать','#')
