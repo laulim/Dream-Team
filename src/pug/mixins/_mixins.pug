@@ -1,5 +1,4 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
-
 mixin linkIcons(link, icon)
 	- iconClass = icon || ''
 	a(href=link, target="_blank")
@@ -36,3 +35,4 @@ mixin checkbox(name, label)
 		input(class="checkbox__input" type="checkbox"  name= name)
 		span.checkbox__type
 		|&nbsp;#{label}
+    
