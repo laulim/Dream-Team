@@ -70,6 +70,7 @@ gulp.task('styles', function() {
 		errorHandler: notify.onError(function(err){
 			return {
 				title: 'Styles',
+				sound: false,
 				message: err.message
 			}
 		})
