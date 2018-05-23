@@ -12,12 +12,16 @@ mixin textarea(name, placeholder, label)
 	else
 		textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30',  name= name, placeholder= placeholder)
 
-mixin textarea-link(name, placeholder, label)
+
+
+mixin text-link(type, placeholder)
 	if label
 		.title-medium.pb-15 #{label}
-		textarea( class = 'textarea-link pl-15 pt-10 pr-80',  name= name, placeholder= placeholder)
+		input(type = type, name = name, placeholder = placeholder class="text-link pl-15 pt-10 pb-10 pr-60").input
 	else
-		textarea( class = 'textarea-link pl-15 pt-10 pr-80',  name= name, placeholder= placeholder)
+		input(type = type, name = name, placeholder = placeholder class="text-link pl-15 pt-10 pb-10 pr-60").input
+
+
 
 mixin radioButton(name, value, text)
 	label.form-radio__label
