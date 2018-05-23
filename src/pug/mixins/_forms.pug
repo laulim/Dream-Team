@@ -8,20 +8,9 @@ mixin textInput(name, type, placeholder, label)
 mixin textarea(name, placeholder, label)
 	if label
 		.title-medium.pb-15 #{label}
-		textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30',  name= name, placeholder= placeholder)
+		textarea( class = 'textarea',  name= name, placeholder= placeholder)
 	else
-		textarea( class = 'textarea pl-15 pt-15 pr-15 pb-30',  name= name, placeholder= placeholder)
-
-
-
-mixin text-link(type, placeholder)
-	if label
-		.title-medium.pb-15 #{label}
-		input(type = type, name = name, placeholder = placeholder class="text-link pl-15 pt-10 pb-10 pr-60").input
-	else
-		input(type = type, name = name, placeholder = placeholder class="text-link pl-15 pt-10 pb-10 pr-60").input
-
-
+		textarea( class = 'textarea',  name= name, placeholder= placeholder)
 
 mixin radioButton(name, value, text)
 	label.form-radio__label

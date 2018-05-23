@@ -10,30 +10,30 @@ block content
 	.container
 		.title-1.mt-55.mb-35 Добавить работу
 
-		.title-6.mt-0.mb-10 Название
+		.title-8.mt-0.mb-10 Название
 		+textInput('firstname', 'text', 'Введите название работы')
 
-		.title-6.mt-25.mb-5 Изображение 
+		.title-8.mt-25.mb-5 Изображение 
 		.title-7 Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
 		
 		+file-upload()
 
-		.title-6.mt-25.mb-10 Содержание
+		.title-8.mt-25.mb-10 Содержание
 		+textarea('message', 'Введите описание')
 
-		.title-6.mt-25.mb-10 Результат
+		.title-8.mt-25.mb-10 Результат
 		+textarea('message', 'Введите описание')
 
-		.title-6.mt-25.mb-10 Технологии
+		.title-8.mt-25.mb-10 Технологии
 		+textarea('message', 'Введите описание')
 		
 		.row
-			.col-md-auto
-				.title-6.mt-25.mb-10 Ссылка на проект
-				+text-link('text','Введите ссылку')
-			.col-md-auto
-				.title-6.mt-25.mb-10 Ссылка на GitHub
-				+text-link('text','Введите ссылку')
+			.col-md-auto.width
+				.title-8.mt-25.mb-10 Ссылка на проект
+				+textInput('text','text','Введите ссылку')
+			.col-md-auto.width
+				.title-8.mt-25.mb-10 Ссылка на GitHub
+				+textInput('text','text','Введите ссылку')
 
 		.row.mt-30.mb-100
 			.col-md-auto
