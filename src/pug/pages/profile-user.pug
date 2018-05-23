@@ -1,0 +1,39 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Профиль пользователя'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-user.pug
+
+	.container.section-content
+		.row.align-items-center
+			.col
+				.title-1 Профиль
+			.col.text-right
+				+button('Редактировать', '#')
+		.row
+			.col-md-auto
+			+avatar("../../../img/avatars/photo-big.jpg", "Емельян Казаков")
+			.col
+				.user-info
+					.user-info__title Имя и фамилия
+					.user-info__desc Емельян Казаков
+
+				.user-info
+					.user-info__title Email 
+					.user-info__desc pilat@mail.ru
+
+				.user-info
+					.user-info__title Страна, Город 
+					.user-info__desc Россия, Казань
+
+		.title-2 Комментарии пользователя			
+		+comment-no-avatar("Поездка в LA", "05 Мая 2017 года в 15:45", "Замечательный парк, обязательно отправлюсь туда этим летом.")
+		+comment-no-avatar("Ноутбук для веб-разработчиков", "15 Мая 2017 года в 10:02", "Замечательный парк, обязательно отправлюсь туда этим летом.")
+		+comment-no-avatar("Настройка Sublime", "12 Мая 2017 года в 20:39", "Замечательный парк, обязательно отправлюсь туда этим летом.")
+
+	include ../sections/footer.pug
+
+
