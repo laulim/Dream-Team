@@ -1,0 +1,39 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Блог - страница с постами'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container.mb-120
+		.row.mb-20.mt-40.align-items-center
+			.col-md-8
+				.title-1 Блог веб-разработчика
+
+			.col-md-4.text-right
+				+button-edit('Добавить пост', '#')
+		.row.mb-50
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-1.jpg', 'Поездка в New York', '#')
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-2.jpg', 'Что я делал в долине', '#')
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-3.jpg', 'Как я ходил в поход этим летом', '#')
+		.row.mb-50
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item.jpg', 'Поездка в New York пример длинного названия поста...', '#')
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-2.jpg', 'Что я делал в долине', '#')
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-4.jpg', 'Как я ходил в поход этим летом', '#')
+		.row
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-1.jpg', 'Поездка в New York', '#')
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-2.jpg', 'Что я делал в долине', '#')
+			.col-md-4
+				+cardBlogPost('../../../img/cards/blog-card-item-3.jpg', 'Как я ходил в поход этим летом', '#')
+		
+
+	include ../sections/footer.pug
