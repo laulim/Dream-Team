@@ -1,0 +1,41 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Cтраница с работами'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container.mb-120
+		.row.mb-20.mt-40.align-items-center
+			.col-md-8
+				.title-1 Работы
+					span.title-1-medium
+						| &nbsp которые сделал я и моя команда
+			.col-md-4.text-right
+				+button-edit('Добавить работу', '#')
+		.row.mb-50
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-1.jpg', 'Верстка Landing Page', '#')
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-2.jpg', 'Верстка UI набора', '#')
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-3.jpg', 'Верстка интернет магазина', '#')
+		.row.mb-50
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-1.jpg', 'Верстка Landing Page', '#')
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-2.jpg', 'Верстка UI набора', '#')
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-3.jpg', 'Верстка интернет магазина', '#')
+		.row
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-1.jpg', 'Верстка Landing Page', '#')
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-2.jpg', 'Верстка UI набора', '#')
+			.col-md-4
+				+cardPortfolio('../../../img/cards/portfolio-card-item-3.jpg', 'Верстка интернет магазина', '#')
+
+		
+
+	include ../sections/footer.pug
