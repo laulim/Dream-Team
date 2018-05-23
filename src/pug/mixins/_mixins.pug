@@ -16,6 +16,14 @@ mixin logo(title, subtitle)
 			a(href="#").header-logo__title #{title}
 			.header-logo__sub #{subtitle}
 
+mixin logoDark(title, subtitle)
+	.logo
+		.logo__icon.logo__icon--dark
+			i(class="far fa-paper-plane")
+		.logo__text
+			a(href="#").header-logo__title.header-logo__title--dark #{title}
+			.header-logo__sub.header-logo__sub--dark #{subtitle}
+
 mixin userStatus(status)
 	if (status == true)
 		.header-user
