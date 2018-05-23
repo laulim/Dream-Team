@@ -1,0 +1,58 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Контакты'
+	- var pageClass = 'contacts-page'
+
+block content
+	include ../sections/header-admin.pug
+
+	.container.pt-55.pb-80
+		.row.justify-content-end
+			.col-md-auto
+				+button-edit('Редактировать', '#')
+			.col-md-auto
+				+button('Сообщения', '#')
+		.row
+			.col-5
+				.title-1 Контакты
+				table.contacts-table.text-left
+					tr
+						th.contacts-table__index Email
+						td.contacts-table__value.pb-10 #[+link('webdev-ninja@mail.ru', 'mailto:webdev-ninja@mail.ru')]
+					tr
+						th.contacts-table__index Skype
+						td.contacts-table__value.pb-10 #[+link('webdev-ninja', 'skype:webdev-ninja?chat')]
+					tr
+						th.contacts-table__index(rowspan='2') Социальные сети
+						td.contacts-table__value.contacts-table__value--bold.pb-10 #[+link('Профиль Вконтакте', '#')]
+					tr
+						td.contacts-table__value.contacts-table__value--bold.pb-20 #[+link('Профиль Facebook', '#')]
+					tr
+						th.contacts-table__index Телефон
+						td.contacts-table__value.pb-10 +595-456-123
+					tr
+						th.contacts-table__index Адрес
+						td.contacts-table__value Россия, Московская обл. г.Зеленоград
+			.col-4.offset-1
+				.title-1 Связаться со мной
+				form.contact-form
+					+textInput('firstname', 'text', 'Введите имя')
+					+textInput('email', 'text', 'Email')
+					+textarea('message', 'Сообщение')
+					+file-upload("Прикрепить файл", 1)
+						p jpg, png, pdf, doc, весом до 2Мб.
+					input(class='button button--save' type='submit' value='Отправить')
+
+	.container-fluid.px-0
+		iframe(class='contacts-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71419.5849712253!2d37.13207311547063!3d55.98641960020578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b515040599b08b%3A0x3b05106b263a30c4!2z0JfQtdC70LXQvdC-0LPRgNCw0LQsINCc0L7RgdC60LLQsA!5e0!3m2!1sru!2sru!4v1527112567912" frameborder="0" allowfullscreen)
+
+
+
+
+
+
+	include ../sections/footer.pug
+
+block scripts
+	script(src="../js/custom-file-input.js")
