@@ -1,0 +1,9 @@
+mixin comment-no-avatar(relatedTo, date, text, url)
+
+	.comment-wrap.comment-wrap--no-avatar
+
+		.comment__content
+			.comment__header
+				a(href="#").comment__related-to #{relatedTo}
+				.comment__date #[i.far.fa-clock] #{date}
+			.comment__text #{text}

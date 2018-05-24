@@ -1,0 +1,91 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Обо мне'
+	- var pageClass = 'about-me-page'
+
+block content
+	include ../sections/header-admin.pug
+	.container.pt-80.pb-55
+		.row.resume
+			.col-3
+				+avatar("../../../img/avatars/photo-big.jpg", "Емельян Казаков").m-auto
+			.col-9
+				.title-1.mb-5.mt-0 Емельян Казаков
+				p.mt-0.mb-10 Я веб разработчик из Казани. Мне 28 лет.<br> Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+				p.mt-0.mb-25 Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.<br> Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+				.title-3.mt-0.mb-10 Что я умею
+				p.mt-0.mb-10 Меня привлекет Frontend разработка, это не только моя работа, но и хобби.<br> Также знаком и могу решать не сложные задачи на Backend.
+				p.mt-0 Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+
+				+button-edit('Редактировать', '#')
+	.skills
+		.container.pt-55.pb-80
+			.row
+				.col-9.offset-3
+					.title-1.mt-0.mb-5 Технологии
+					p.mt-0.mb-50 Которые использую в работе
+			.row.mb-40
+				.col-3 
+					.skill__title Frontend
+				.col-9
+					.skill-wrap
+						.skill__circle.skill__circle--green
+							.skill__name HTML5
+					.skill-wrap
+						.skill__circle.skill__circle--green
+							.skill__name CSS3
+					.skill-wrap
+						.skill__circle.skill__circle--green
+							.skill__name JS
+					.skill-wrap
+						.skill__circle.skill__circle--green
+							.skill__name jQuery
+			.row.mb-40
+				.col-3 
+					.skill__title Backend
+				.col-9
+					.skill-wrap
+						.skill__circle.skill__circle--blue
+							.skill__name PHP
+					.skill-wrap
+						.skill__circle.skill__circle--blue
+							.skill__name MySql
+			.row
+				.col-3 
+					.skill__title Workflow
+				.col-9
+					.skill-wrap
+						.skill__circle.skill__circle--yellow
+							.skill__name Git
+					.skill-wrap
+						.skill__circle.skill__circle--yellow
+							.skill__name Gulp
+					.skill-wrap
+						.skill__circle.skill__circle--yellow
+							.skill__name Bower
+					.skill-wrap
+						.skill__circle.skill__circle--yellow
+							.skill__name.skill__name--smaller WebPack
+	.container.pt-75.pb-80
+			.row
+				.col-9.offset-3
+					.title-1.mt-0.mb-35 Опыт работы
+					.experience__block.mb-35
+						.experience__period февраль 2017  — по настоящее времяфевраль 2017  — по настоящее время
+						.experience__position Frontend разработчик, Вконтактe, mail.ru group
+						p.experience__description Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+					.experience__block.mb-35
+						.experience__period сентябрь 2015 — январь 2017
+						.experience__position Разработчик интерфейсов, Яндекс
+						p.experience__description Работы в проекте Яндекс Музыка. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы.
+					.experience__block
+						.experience__period март 2013 — август 2015
+						.experience__position Веб-разработчик, Cloud studio
+						p.experience__description Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазинов. Участие в разработке CRM системы “Sky CRM”. Стек используемых технологий: Git, JS, Angular. 
+					
+ 
+
+	
+	include ../sections/footer.pug
