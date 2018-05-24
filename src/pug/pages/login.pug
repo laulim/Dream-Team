@@ -5,4 +5,32 @@ block variables
 	- var pageClass = 'login-page'
 
 block content
-		h1 Заготовка для страницы входа
+	.login-page
+		.container-fluid.pt-45.pl-100.pr-50
+			.row.justify-content-between
+				.col-md-auto
+					+logo('Супер Сайт')
+				.col-md-auto
+					+link('Регистрация','#').login-page__link
+		.container.login-page__block
+			.row.align-items-center.justify-content-center
+				.col-4
+					form.login-page__form.text-center
+						.title-1 Вход на сайт
+						+error('Введите email')
+						+textInput('email', 'text', 'Email')
+						+textInput('pasword', 'text', 'Пароль')
+						.login-page__form-helpers
+							+checkbox('checkbox', 'Запомнить меня')
+							+link('Забыл пароль','#').login-page__link
+						+button-enter('Войти', '#')
+		.container.pb-15
+			.row.justify-content-center
+				.col-md-auto.text-center.login-page__copyright
+					p © Dream-Team
+					p Создано с &nbsp
+						i.fas.fa-heart
+						| &nbsp в #[a(href='#' target='_blank') WebCademy.ru] в 2017 году
+
+
+
