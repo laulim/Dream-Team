@@ -8,27 +8,38 @@ block content
 	include ../sections/header-admin.pug
 
 	.container
-		.title-1.mt-55.mb-35 Добавить работу
 
-		.title-8.mt-0.mb-10 Название
-		+textInput('firstname', 'text', 'Введите название работы')
+		.row
+			.col-md-10.offset-1
+				.title-1.mt-55.mb-35 Добавить работу
 
-		.title-8.mt-25.mb-5 Изображение 
-		.title-7 Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+				.title-8.mt-0.mb-10 Название
+				+textInput('firstname', 'text', 'Введите название работы')
+
+		.row
+			.col-md-10.offset-1
+				.title-8.mt-25.mb-5 Изображение 
+				.title-7 Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
 		
-		+file-upload()
+				+file-upload()
 
-		.title-8.mt-25.mb-10 Содержание
-		+textarea('message', 'Введите описание')
+		.row
+			.col-md-10.offset-1
+				.title-8.mt-25.mb-10 Содержание
+				+textarea('message', 'Введите описание')
 
-		.title-8.mt-25.mb-10 Результат
-		+textarea('message', 'Введите описание')
+		.row
+			.col-md-10.offset-1
+				.title-8.mt-25.mb-10 Результат
+				+textarea('message', 'Введите описание')
 
-		.title-8.mt-25.mb-10 Технологии
-		+textarea('message', 'Введите описание')
+		.row
+			.col-md-10.offset-1
+				.title-8.mt-25.mb-10 Технологии
+				+textarea('message', 'Введите описание')
 		
 		.row
-			.col-md-auto.width
+			.col-md-auto.width.offset-1
 				.title-8.mt-25.mb-10 Ссылка на проект
 				+textInput('text','text','Введите ссылку')
 			.col-md-auto.width
@@ -36,7 +47,7 @@ block content
 				+textInput('text','text','Введите ссылку')
 
 		.row.mt-30.mb-100
-			.col-md-auto
+			.col-md-auto.offset-1
 				+button-save('Сохранить', '#')
 			.col-md-auto
 				+button('Отмена','#')
