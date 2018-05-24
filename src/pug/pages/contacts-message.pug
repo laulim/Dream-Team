@@ -1,0 +1,18 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Контакты -сообщение от посетителя'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container
+		.row 
+			.col.align-self-center.mb-35.mt-60 
+				.title-1 Сообщения от посетителей
+		.row.mb-120
+			.col.align-self-center
+				+user-message('22 Августа 2017', 'Джон До', 'jhondoe@gmail.com', 'Avrora-platform.pdf')
+					p.user-content Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.
+
+	include ../sections/footer.pug
