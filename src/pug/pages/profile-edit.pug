@@ -6,31 +6,27 @@ block variables
 
 block content
 	include ../sections/header-user.pug
-	.container.mt-70
+	.container.section-content
 		h1.title-1 Редактировать профиль
-		.row.profile-edit
+		.row.mb-10
 			.col-4
 				+textInput('firstname', 'text', 'Введите имя','Имя')
 				.mb-30
 				+textInput('lastname', 'text', 'Введите фамилию','Фамилия')
 				.mb-30
-				
 				+textInput('email', 'email', 'Введите email','Email')
-				.mb-10
-		.row
-
-			.col-8
+		.row.mb-20
+			.col-md-auto
 				+file-upload("Фотография", 1)
 					p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
-		.row
+		.row.mb-30
 			.col-4
 				+textInput('country', 'text', 'Введите страну','Страна')
 				.mb-5
 				+textInput('city', 'text', 'Введите город','Город')
-				.mb-30
+		.row 
+			.col-3.space-between
 				+button-save('Сохранить', '#')
 				+button('Отмена', '#')
-				.mb-120
-
 		
 	include ../sections/footer.pug
