@@ -7,13 +7,22 @@ mixin button(text,link,icon)
       a.button(href=link)
          | #{text}
 
+mixin buttonLeft(text,link,icon)
+   if icon
+      a.button(href=link)
+         i(class="fas " + icon )
+         | &nbsp;#{text}
+   else
+      a.button(href=link)
+         | #{text}
+
 mixin button-edit(text,link,icon)
    if icon
-      a.button.button--edit(href=link)
+      a.button.button--position.button--edit(href=link)
          | #{text}
          i(class="fas " + icon)
    else
-      a.button.button--edit(href=link)
+      a.button.button--position.button--edit(href=link)
          | #{text}
 
 mixin button-delete(text,link,icon)

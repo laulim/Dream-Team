@@ -1,0 +1,49 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Блог - страница с постом'
+	- var pageClass = ''
+
+	.row
+		.col-md-12
+			include ../sections/header-admin.pug
+
+	.container
+		.row
+			.col-md-10.offset-1
+				+button-edit('Редактировать', '#')
+				include ../sections/blog-post.pug
+			.col-md-10.offset-1.button--right
+				+buttonLeft('Назад','#','fa-arrow-left')
+				+button('Вперед','#','fa-arrow-right')
+
+		.row
+			.col-md-10.offset-1
+				.title-2 2 комментария
+				.comment-wrap
+					+avatar("../../../img/avatars/avatar-2.jpg", "Джон До", "avatar--small")
+					.comment__content
+						.comment__header
+							.comment__user-name Джон До
+							.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
+						.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
+
+				.comment-wrap
+					+avatar("../../../img/avatars/avatar-2.jpg", "Джон До", "avatar--small")
+					.comment__content
+						.comment__header
+							.comment__user-name Джон До
+							.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
+						.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
+
+				.title-2 Оставить комментарий
+
+				include ../sections/comment-add.pug
+
+	.row
+		.col-md-12
+
+			include ../sections/footer.pug
+
+
+
