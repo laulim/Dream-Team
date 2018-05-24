@@ -15,7 +15,7 @@
  	
  	&:active, &:hover, &:focus {
  		border: 1px solid @border-color-active;
- 		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.4);
+ 		box-shadow: @form-box-shadow;
  	}
 }
 
@@ -37,7 +37,7 @@
  	
  	&:active, &:hover, &:focus {
  		border: 1px solid @border-color-active;
- 		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.4);
+ 		box-shadow: @form-box-shadow;
  	}
 }
 
@@ -54,7 +54,7 @@
 
  	&:active, &:hover, &:focus {
  		border: 1px solid @border-color-active;
- 		box-shadow: 0 0 0 3px rgba(139, 167, 197, 0.4);
+ 		box-shadow: @form-box-shadow;
  	}
 } 
 
@@ -77,8 +77,6 @@
 	outline: none;
 	border-radius: 50%;
 	background: #fff;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
 	transition: 0.5s;
 	margin-right: 10px;
 	vertical-align: top;
