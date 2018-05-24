@@ -45,14 +45,12 @@ block content
 					input(class='button button--save' type='submit' value='Отправить')
 
 	.container-fluid.px-0
-		iframe(class='contacts-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71419.5849712253!2d37.13207311547063!3d55.98641960020578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b515040599b08b%3A0x3b05106b263a30c4!2z0JfQtdC70LXQvdC-0LPRgNCw0LQsINCc0L7RgdC60LLQsA!5e0!3m2!1sru!2sru!4v1527112567912" frameborder="0" allowfullscreen)
-
-
-
-
-
+		#map.contacts-map
+			
 
 	include ../sections/footer.pug
 
 block scripts
 	script(src="../js/custom-file-input.js")
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLEqvIXKAkDlvLPw1vUCSoz2KAPQCIAyU&callback=initMap")
+	script(src="../js/google-map.js")
