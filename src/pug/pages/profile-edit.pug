@@ -1,0 +1,32 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Редактирование профиля'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-user.pug
+	.container.section-content
+		h1.title-1 Редактировать профиль
+		.row.mb-10
+			.col-4
+				+textInput('firstname', 'text', 'Введите имя','Имя')
+				.mb-30
+				+textInput('lastname', 'text', 'Введите фамилию','Фамилия')
+				.mb-30
+				+textInput('email', 'email', 'Введите email','Email')
+		.row.mb-20
+			.col-md-auto
+				+file-upload("Фотография", 1)
+					p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+		.row.mb-30
+			.col-4
+				+textInput('country', 'text', 'Введите страну','Страна')
+				.mb-5
+				+textInput('city', 'text', 'Введите город','Город')
+		.row 
+			.col-3.space-between
+				+button-save('Сохранить', '#')
+				+button('Отмена', '#')
+		
+	include ../sections/footer.pug
