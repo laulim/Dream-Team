@@ -8,11 +8,11 @@ mixin file-upload(title, number, imgPath)
 					.title-6.mb-2 #{title}
 					.legend__descr 
 						block
-				input(id = idName type="file" name="file" + "-" + number data-multiple-caption="{count} файлов выбрано" multiple ).inputfile
-				label(for=idName) Выбрать файл
+				input(id = idName type = "file" name = "file" + "-" + number data-multiple-caption = "{count} файлов выбрано" multiple ).inputfile
+				label(for = idName) Выбрать файл
 				span Файл не выбран
 			.file-upload__thumb
-				img(src='../img/blog/img-post-uploaded.jpg')
+				img(src = '../img/blog/img-post-uploaded.jpg')
 				+button-delete('Удалить', '#') Удалить
 	else
 		.file-upload
@@ -21,8 +21,8 @@ mixin file-upload(title, number, imgPath)
 					.title-6.mb-2 #{title}
 					.legend__descr 
 						block
-				input(id = idName type="file" name="file" + "-" + number data-multiple-caption="{count} файлов выбрано" multiple ).inputfile
-				label(for=idName) Выбрать файл
+				input(id = idName type = "file" name = "file" + "-" + number data-multiple-caption = "{count} файлов выбрано" multiple ).inputfile
+				label(for = idName) Выбрать файл
 				span Файл не выбран
 
 
