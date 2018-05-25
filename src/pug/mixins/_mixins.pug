@@ -2,8 +2,8 @@
 
 mixin linkIcons(link, icon)
 	- iconClass = icon || ''
-	a(href=link, target="_blank")
-		i(class="fab " + iconClass)
+	a(href = link, target = "_blank")
+		i(class = "fab " + iconClass)
 
 mixin badge(text)
 	.badge #{text}
@@ -11,7 +11,7 @@ mixin badge(text)
 mixin logo(title, subtitle)
 	.logo
 		.logo__icon
-			i(class="far fa-paper-plane")
+			i(class = "far fa-paper-plane")
 		.logo__text
 			a(href="#").header-logo__title #{title}
 			.header-logo__sub #{subtitle}
@@ -40,7 +40,7 @@ mixin userStatus(status)
 
 
 mixin checkbox(name, label)
-	label.checkbox__label(class!=attributes.class)
-		input(class="checkbox__input" type="checkbox"  name= name)
+	label.checkbox__label(class != attributes.class)
+		input(class = "checkbox__input" type = "checkbox"  name = name)
 		span.checkbox__type
 		|&nbsp;#{label}
