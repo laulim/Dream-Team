@@ -7,7 +7,6 @@ mixin button(text, link, icon)
       a.button(href = link)
          | #{text}
 
-<<<<<<< HEAD
 mixin buttonLeft(text,link,icon)
    if icon
       a.button(href=link)
@@ -20,19 +19,10 @@ mixin buttonLeft(text,link,icon)
 mixin button-edit(text,link,icon)
    if icon
       a.button.blog-page__position.button--edit(href=link)
-=======
-mixin button-edit(text, link, icon)
-   if icon
-      a.button.button--edit(href = link)
->>>>>>> develop
          | #{text}
          i(class = "fas" + icon)
    else
-<<<<<<< HEAD
       a.button.blog-page__position.button--edit(href=link)
-=======
-      a.button.button--edit(href = link)
->>>>>>> develop
          | #{text}
 
 mixin button-delete(text, link, icon)
