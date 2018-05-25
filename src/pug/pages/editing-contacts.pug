@@ -1,0 +1,41 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Редактирование контакты'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container
+		.mt-80.title-1 Редактировать данные
+		.row.mt-25
+			.col-md-3
+				+textInput('firstname', 'text', 'Введите имя', 'Имя')
+			.col-md-3
+				+textInput('surname', 'text', 'Введите фамилию', 'Фамилия')
+		.row.mt-15
+			.col-md-3
+				+textInput('email', 'email', 'Введите email', 'Email')
+			.col-md-3
+				+textInput('skype', 'skype', 'Введите skupe', 'Skype')
+		.row.mt-15
+			.col-md-3
+				+textInput('vk', 'text', 'Введите ссылку на профиль', 'Вконтакте')
+			.col-md-3
+				+textInput('facebook', 'text', 'Введите ссылку на профиль', 'Facebook')
+			.col-md-3
+				+textInput('github', 'text', 'Введите ссылку на профиль', 'GitHub')
+			.col-md-3
+				+textInput('twitter', 'text', 'Введите ссылку на профиль', 'Twitter')
+		.row.mt-15
+			.col-md-3
+				+textInput('phone', 'tel', 'Введите телефон', 'Телефон')
+			.col-md-3
+				+textInput('adress', 'text', 'Введите адрес', 'Адрес')
+		.row.mt-30.mb-120
+			.col-md-2
+				+button-save('Сохранить', '#')
+			.col-md-2.rml-25
+				+button('Отмена', '#')
+
+	include ../sections/footer.pug
