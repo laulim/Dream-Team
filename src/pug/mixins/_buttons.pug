@@ -18,11 +18,11 @@ mixin buttonLeft(text,link,icon)
 
 mixin button-edit(text,link,icon)
    if icon
-      a.button.button--position.button--edit(href=link)
+      a.button.blog-page__position.button--edit(href=link)
          | #{text}
          i(class="fas " + icon)
    else
-      a.button.button--position.button--edit(href=link)
+      a.button.blog-page__position.button--edit(href=link)
          | #{text}
 
 mixin button-delete(text,link,icon)
