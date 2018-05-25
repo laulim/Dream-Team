@@ -19,11 +19,11 @@ block content
 						.title-1 Вход на сайт
 						+error('Введите email')
 						+textInput('email', 'text', 'Email')
-						+textInput('pasword', 'text', 'Пароль')
+						+textInput('pasword', 'password', 'Пароль')
 						.login-page__form-helpers
 							+checkbox('checkbox', 'Запомнить меня')
 							+link('Забыл пароль','#').login-page__link
-						+button-enter('Войти', '#')
+						+button-enterInput('Войти')
 		.container.pb-15
 			.row.justify-content-center
 				.col-md-auto.text-center.login-page__copyright

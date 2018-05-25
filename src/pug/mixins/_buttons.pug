@@ -43,6 +43,9 @@ mixin button-enter(text, link, icon)
       a.button.button--enter(href = link)
          | #{text}
 
+mixin button-enterInput(value)
+      input.button.button--enter(type='submit', value = value)
+
 mixin button-profile(text, link, icon)
    if icon
       a.button.button--profile(href = link)

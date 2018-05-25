@@ -21,8 +21,8 @@ block content
 							p Используйте другой email чтобы создать новый аккаунт.
 							p Или воспользуйтесь #[a(href="#" target="_blank") восстановлением пароля], чтобы войти на сайт.
 						+textInput('email', 'text', 'Email')
-						+textInput('pasword', 'text', 'Пароль')
-						+button-enter('Регистрация', '#')
+						+textInput('pasword', 'password', 'Пароль')
+						+button-enterInput('Регистрация')
 		.container.pb-15
 			.row.justify-content-center
 				.col-md-auto.text-center.login-page__copyright
