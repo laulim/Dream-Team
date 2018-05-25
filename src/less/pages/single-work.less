@@ -60,10 +60,11 @@
 .single-work-title__img {
 	display: block;
 	width: 100%;
-	height: 544px;
-	background-image: url('../img/works/d-ausmaids-home.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+	height: auto;
+	background-color: #d5ebff;
+	img {
+		width: 100%;
+	}
 }
 
 .single-work-desc {
@@ -76,34 +77,23 @@
 	margin-bottom: 20px;
 }
 
-.single-work-desc__title--smaller {
-	font-size: 22px;
-	letter-spacing: 0.4px;
-}
-
-.single-work-desc__text {
-	font-size: 16px;
-	letter-spacing: 0.4px;
-	line-height: 1.5;
-}
-
-.single-work-desc__text--strong {
+.single-work-desc h6 {
 	font-weight: 700;
 }
 
-.single-work-desc__list {
+.single-work-desc ul {
 	list-style-type:  none;
 	padding: 0;
 	margin-bottom: 30px;
+	li {
+		margin-bottom: 16px;
+		&:before {
+			display: none;
+		}
+	}
 }
 
-.single-work-desc__list-item {
-	margin-bottom: 16px;
-}
 
-.single-work-desc__link {
-	display: inline-block;
-}
 
 .single-work-buttons {
 	display: flex;
