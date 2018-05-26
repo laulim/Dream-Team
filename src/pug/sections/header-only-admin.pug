@@ -1,0 +1,14 @@
+.header-admin
+	.header-admin__user
+		+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
+		.header-admin__user-data
+			.header-admin__name Юрий Ключевский
+			+badge('Администратор')
+	.admin-nav
+		+linkFasIcon('Пост', '#', 'fa-plus-circle link__icon').admin-nav__link
+		+linkFasIcon('Работа', '#', 'fa-plus-circle link__icon').admin-nav__link
+		+linkFasIcon('Обо мне', '#', 'fa-edit link__icon').admin-nav__link
+		+linkFasIcon('Контакты', '#', 'fa-edit link__icon').admin-nav__link
+		+linkFasIcon('Сообщения', '#', 'fa-envelope link__icon').admin-nav__link
+	.admin-nav__exit
+		+linkFasIcon('Выход', '#', 'fa-sign-out-alt link__icon').admin-nav__link
