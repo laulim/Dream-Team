@@ -17,6 +17,7 @@ mixin buttonLeft(text,link,icon)
       a.button(href=link)
          | #{text}
 
+mixin button-edit(text,link,icon)
    if icon
       a.button.button--edit(href=link)
          | #{text}

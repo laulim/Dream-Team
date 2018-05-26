@@ -44,3 +44,14 @@ mixin checkbox(name, label)
 		input(class = "checkbox__input" type = "checkbox"  name = name)
 		span.checkbox__type
 		|&nbsp;#{label}
+
+
+mixin jobItem(date, name)
+	.user-message
+		.user-message__header
+			.user-message__date #{date}
+			+button-delete('Удалить', '#')
+		.user-message__from
+			.user-message__name #{name}
+		.user-message__text
+			block
