@@ -1,0 +1,120 @@
+.resume {
+	position: relative;
+}
+
+.resume .avatar {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+.resume .title-1 {
+		color: #037ec6;
+	}
+
+.resume p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.resume .button {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.skills {
+	background-color: #222222;
+	color: #fff;
+}
+
+.skill__title {
+	padding-top: 40px;
+	font-size: 24px;
+	font-weight: 900;
+	text-align: center;
+}
+
+// Progress-bar
+
+.skill-wrap {
+	display: inline-block;
+	margin-right: 55px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.skill__circle {
+	width: 112px;
+	height: 112px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.skill__circle:before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	border-radius: 50%;
+	background-color: #222222;
+	z-index: 1;
+}
+
+.skill__circle:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-right: 50%;
+}
+
+.skill__circle--green:after {
+	background-image: linear-gradient(50deg, #3aaa35 50%, transparent 50%, transparent), linear-gradient(270deg, #3aaa35 50%, transparent 50%, transparent)
+}
+
+.skill__circle--blue:after {
+	background-image: linear-gradient(50deg, #009cf5 50%, transparent 50%, transparent), linear-gradient(270deg, #009cf5 50%, transparent 50%, transparent)
+}
+
+.skill__circle--yellow:after {
+	background-image: linear-gradient(50deg, #ffcc00 50%, transparent 50%, transparent), linear-gradient(270deg, #ffcc00 50%, transparent 50%, transparent)
+}
+
+.skill__name {
+	z-index: 2;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.skill__name--smaller {
+	font-size: 16px;
+}
+
+// experiense block
+
+.experience__period {
+	font-size: 16px;
+	opacity: 0.5;
+	margin-bottom: 15px;
+}
+
+.experience__position {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.experience__description {
+	font-size: 16px;
+	line-height: 1.5;
+}
