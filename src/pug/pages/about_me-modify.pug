@@ -2,72 +2,67 @@ extends ../layouts/clean.pug
 
 block variables
 	- var title = 'Обо мне - редактировать'
+	- var pageClass = 'about-me-edit-page'
 
 block content
 	include ../sections/header-admin.pug
-	.container
+	.container.edit-about-me.pt-40.pb-15
 		.row
 			.col
-				h1.title-1 Редактировать - Обо Мне
-				h6.title-6 Имя, фамилия
-				+textInput('firstname', 'text', 'Введите имя')
+				h1.title-1.mb-30 Редактировать - Обо Мне
+				+textInput('firstname', 'text', 'Введите имя', 'Имя, фамилия')
 				+file-upload("Фотография", 1)
 					p Изображение jpg или png, рекомендуемый размер 205px на 205px, вес до 2Мб.
-				.avatar-tecnology
-					+avatar("../img/avatars/photo-big.jpg", "Емельян Казаков")
-				h6.title-6 Информация на главной
-				+textarea('message', 'Оставьте Ваше сообщение')
-		.container.technology__form
-			.row
-				.col
-					h3.title-3 Технологии
-			.row
-				.col-2
-					+textInput('procent', 'counter', '50', 'HTML5') 
-					span &nbsp;%
-				.col-2
-					+textInput('procent', 'counter', '50', 'CSS3') 
-					span &nbsp;%
-				.col-2
-					+textInput('procent', 'counter', '50', 'JS') 
-					span &nbsp;%
-				.col-2
-					+textInput('procent', 'counter', '50', 'jQuery') 
-					span &nbsp;%
-			.row
-				.col-2
-					+textInput('procent', 'counter', '50', 'PHP') 
-					span &nbsp;%
-				.col-2
-					+textInput('procent', 'counter', '50', 'MySql') 
-					span &nbsp;%
-			.row
-				.col-2
-					+textInput('procent', 'counter', '50', 'Git') 
-					span &nbsp;%
-				.col-2
-					+textInput('procent', 'counter', '50', 'Gulp') 
-					span &nbsp;%
-				.col-2
-					+textInput('procent', 'counter', '50', 'Bower') 
-					span &nbsp;%
-				.col-2
-					+textInput('procent', 'counter', '50', 'WebPack') 
-					span &nbsp;%
+				+avatar("../img/avatars/photo-big.jpg", "Емельян Казаков")
+				+textarea('message', 'Оставьте Ваше сообщение', 'Информация на главной')
+	.container.technology__form.pb-20
+		.row
+			.col
+				h3.title-3 Технологии
+		.row.mb-20
+			.col-2
+				+textInput('procent', 'counter', '50', 'HTML5') 
+				span &nbsp;%
+			.col-2
+				+textInput('procent', 'counter', '50', 'CSS3') 
+				span &nbsp;%
+			.col-2
+				+textInput('procent', 'counter', '50', 'JS') 
+				span &nbsp;%
+			.col-2
+				+textInput('procent', 'counter', '50', 'jQuery') 
+				span &nbsp;%
+		.row.mb-20
+			.col-2
+				+textInput('procent', 'counter', '50', 'PHP') 
+				span &nbsp;%
+			.col-2
+				+textInput('procent', 'counter', '50', 'MySql') 
+				span &nbsp;%
+		.row
+			.col-2
+				+textInput('procent', 'counter', '50', 'Git') 
+				span &nbsp;%
+			.col-2
+				+textInput('procent', 'counter', '50', 'Gulp') 
+				span &nbsp;%
+			.col-2
+				+textInput('procent', 'counter', '50', 'Bower') 
+				span &nbsp;%
+			.col-2
+				+textInput('procent', 'counter', '50', 'WebPack') 
+				span &nbsp;%
 
-		h3.title-3 Опыт работы
-		+user-message('февраль 2017  — по настоящее время', 'Frontend разработчик, Вконтактe, mail.ru group')
+	.container.pb-100
+		h3.title-3.mb-20 Опыт работы
+		+jobItem('февраль 2017  — по настоящее время', 'Frontend разработчик, Вконтактe, mail.ru group')
 				p.user-content Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
 		
-		h3.title-3 Добавить новое место
-		.user-message.mb-100
-			h6.title-6 Период
-			+textInput('firstname', 'text', 'Введите даты начала и окончания работы')
-			h6.title-6 Название должности
-			+textInput('firstname', 'text', 'Введите название должности')
-			h6.title-6 Описание работы, должностные обязанности, достигнутые результаты
-			.mb-20
-				+textarea('message', 'Напишите интересное краткое содержательное описание')
+		h3.title-3.mb-30 Добавить новое место
+		.user-message.add-job-item
+			+textInput('firstname', 'text', 'Введите даты начала и окончания работы', 'Период')
+			+textInput('firstname', 'text', 'Введите название должности', 'Название должности')
+			+textarea('message', 'Напишите интересное краткое содержательное описание', 'Описание работы, должностные обязанности, достигнутые результаты')
 			+button-save('Добавить', '#')
 
 
