@@ -1,0 +1,55 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Отдельная работа'
+	- var pageClass = 'single-work-page'
+
+block content
+	include ../sections/header-only-admin.pug
+
+	.single-work__bg
+		.single-work__bg-opacity
+			.single-work__bg-gradient.pt-40.pb-30
+				+logoDark('Digital Lifestyle', 'Сайт IT специалиста')
+				.container.single-work-title
+					+button-edit('Редактировать', '#')
+					.row.justify-content-center
+						.col-10
+							.single-work-title__title.mb-15 Верстка и frontend Интернет магазина
+							+link('Емельян Казаков','#').single-work-title__link
+							+link('Работы','#').single-work-title__link.single-work-title__link--tag
+							+link('16 марта 2017','#').single-work-title__link
+
+							a(href='../img/works/d-ausmaids-home.jpg' target="_blank").single-work-title__img
+								img(src='../img/works/d-ausmaids-home-mini.jpg' alt="Ausmaids Home")
+	.container.single-work-desc.user-content
+		.row.justify-content-center.mb-30
+			.col-5
+				h3 Кратко о проекте
+				p Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
+				h6 Время работы над проектом: 6 недель
+				h6 Страниц сверстано: 52 страницы
+				h6 Бюджет проекта: до 60 000 рублей
+				h3 Результат
+				p Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
+			.col-5
+				h3 Технологии
+				ul
+					li • HTML5, CSS3.
+					li • JavaScript, jQuery.
+					li • LESS, PUG, Gulp, npm, bower.
+				h3 Ссылка на проект
+				a(href='http://magnum-store.ru').mt-5.mb-40 http://magnum-store.ru
+				h3 Код на github
+				a(href='https://github.com/pozitive/magnumstore/').mt-5 https://github.com/pozitive/magnumstore/
+		.row.justify-content-center
+			.col-10.single-work-buttons
+				+buttonLeft('Все работы','#','fa-arrow-left')
+				+button('Следующая работа','#','fa-arrow-right')
+
+
+
+
+
+
+	include ../sections/footer.pug

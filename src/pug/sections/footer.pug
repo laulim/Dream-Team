@@ -1,1 +1,28 @@
-// Секция под футер для сайта
+footer.footer
+	.container
+		.row
+			.col-4
+				p © Dream-Team
+				p Создано с &nbsp
+					i.fas.fa-heart
+					| &nbsp в #[a(class='footer-link__style' href='#' target='_blank') WebCademy.ru] в 2018 году
+			.col-4
+				nav
+					ul.footer-nav
+						li.footer-nav__item
+							a(href="#") Главная
+						li.footer-nav__item
+							a(href="#") Обо мне
+						li.footer-nav__item
+							a(href="#") Работы
+						li.footer-nav__item
+							a(href="#") Блог
+						li.footer-nav__item
+							a(href="#") Контакты
+			.col-4
+				.footer__icons
+					+linkIcons("#", "fa-vk")
+					+linkIcons("#", "fa-twitter")
+					+linkIcons("#", "fa-youtube")
+					+linkIcons("#", "fa-instagram")
+					+linkIcons("#", "fa-facebook-f")
