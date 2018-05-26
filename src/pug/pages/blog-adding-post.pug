@@ -1,0 +1,33 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Блог - страница добавления поста'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container
+
+		.row.mt-40
+			.col-md-10.offset-1
+				.title-1.mb-40 Добавить пост
+				.title-8.mb-10 Название
+				+textInput('firstname', 'text', 'Введите имя')
+
+		.row.mt-30
+			.col-md-10.offset-1
+				+file-upload("Изображение", 3,'')
+					p Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+
+		.row.mt-10
+			.col-md-10.offset-1
+				.title-8.mb-10 Содержание
+				+textarea('message', 'Введите город')
+
+		.row.mt-35.mb-120
+			.col-md-auto.offset-1
+				+button-save('Сохранить', '#')
+			.col-md-auto
+				+button('Отмена', '#')
+		
+	include ../sections/footer.pug
