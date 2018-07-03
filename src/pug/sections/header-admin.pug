@@ -2,7 +2,7 @@
 	.header-admin__user
 		+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
 		.header-admin__user-data
-			.header-admin__name Юрий Ключевский
+			+link('Юрий Ключевский', '#').header-admin__name
 			+badge('Администратор')
 	.admin-nav
 		+linkFasIcon('Пост', '#', 'fa-plus-circle link__icon').admin-nav__link
