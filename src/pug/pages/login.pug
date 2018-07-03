@@ -15,10 +15,10 @@ block content
 		.container.login-page__block
 			.row.align-items-center.justify-content-center
 				.col-4
-					form.login-page__form.text-center
+					form#login-form.login-page__form.text-center
 						.title-1 Вход на сайт
-						+error('Введите email')
-						+textInput('email', 'text', 'Email')
+						//- +error('Введите email')
+						+textInput('email', 'email', 'Email')
 						+textInput('pasword', 'password', 'Пароль')
 						.login-page__form-helpers
 							+checkbox('checkbox', 'Запомнить меня')
@@ -31,6 +31,8 @@ block content
 					p Создано с &nbsp
 						i.fas.fa-heart
 						| &nbsp в #[a(href='#' target='_blank') WebCademy.ru] в 2017 году
+block scripts
+	script(src="js/login-form-check.js")
 
 
 
