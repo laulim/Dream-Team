@@ -24,9 +24,9 @@ block content
 			.col-md-4
 				+cardBlogPost('../../../img/cards/blog-card-item.jpg', 'Поездка в New York пример длинного названия поста...', '#')
 			.col-md-4
-				+cardBlogPost('../../../img/cards/blog-card-item-2.jpg', 'Что я делал в долине', '#')
+				+cardBlogPost('../../../img/cards/blog-card-item-2.jpg', 'Что я делал в долине Смауга, старого страшного дракона', '#')
 			.col-md-4
-				+cardBlogPost('../../../img/cards/blog-card-item-4.jpg', 'Как я ходил в поход этим летом', '#')
+				+cardBlogPost('../../../img/cards/blog-card-item-4.jpg', 'Как я ходил в поход этим летом по горам да скалам, по лесам да топям', '#')
 		.row
 			.col-md-4
 				+cardBlogPost('../../../img/cards/blog-card-item-1.jpg', 'Поездка в New York', '#')
@@ -37,3 +37,5 @@ block content
 		
 
 	include ../sections/footer.pug
+block scripts
+	script(src="../js/cut-card-post-string.js")
