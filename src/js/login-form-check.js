@@ -44,7 +44,7 @@ $(document).ready(function(){
 							_form.unbind('submit').submit();
 							// console.log('Yeeep');
 						} else if (passwordVal.length > 0){
-							input.next('.error').slideUp(500, function(){$(this).remove()});
+							input.siblings('.error').slideUp(500, function(){$(this).remove()});
 							errorMsgData.insertBefore(_form.find('.login-page__form-helpers')).hide().slideDown(500);
 						}
 					} else if (value.length > 0) {
