@@ -15,12 +15,12 @@ block content
 		.container.login-page__block
 			.row.align-items-center.justify-content-center
 				.col-4
-					form.login-page__form.text-center
+					form#register-form.login-page__form.text-center
 						.title-1 Регистрация
-						+errorWithDesc('Данный email уже занят')
-							p Используйте другой email чтобы создать новый аккаунт.
-							p Или воспользуйтесь #[a(href="#" target="_blank") восстановлением пароля], чтобы войти на сайт.
-						+textInput('email', 'text', 'Email')
+						//- +errorWithDesc('Данный email уже занят')
+						//- 	p Используйте другой email чтобы создать новый аккаунт.
+						//- 	p Или воспользуйтесь #[a(href="#" target="_blank") восстановлением пароля], чтобы войти на сайт.
+						+textInput('email', 'email', 'Email')
 						+textInput('pasword', 'password', 'Пароль')
 						+button-enterInput('Регистрация')
 		.container.pb-15
@@ -30,4 +30,6 @@ block content
 					p Создано с &nbsp
 						i.fas.fa-heart
 						| &nbsp в #[a(href='#' target='_blank') WebCademy.ru] в 2017 году
+block scripts
+	script(src="js/register-form-check.js")
 	

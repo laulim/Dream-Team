@@ -7,6 +7,9 @@ mixin button(text, link, icon)
       a.button(href = link)
          | #{text}
 
+mixin buttonInput(value, name)
+      input.button(type="submit", value=value, name=name)
+
 
 mixin buttonLeft(text,link,icon)
    if icon

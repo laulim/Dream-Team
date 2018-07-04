@@ -28,7 +28,7 @@ mixin userStatus(status)
 	if (status == true)
 		.header-user
 			+avatar("../../../img/avatars/avatar-1.jpg", "Юрий Ключевский", "avatar--small")
-			.header-user__name Юрий Ключевский
+			+link('Юрий Ключевский', '#').header-user__name
 			.header-user__badge Пользователь
 			+button-profile('Профиль', '#')
 			+button-profile('Выход', '#')
